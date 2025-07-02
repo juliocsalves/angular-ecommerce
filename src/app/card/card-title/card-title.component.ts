@@ -1,11 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-card-title',
-  imports: [],
+  standalone: true,
+  imports: [
+		NgIf
+	],
   templateUrl: './card-title.component.html',
-  styleUrl: './card-title.component.css'
+  styleUrls: ['./card-title.component.css']
 })
-export class CardTitleComponent {
+export class CardTitleComponent implements OnInit {
+  show = false;
+	cartCount = 0;
 
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.show = true;
+			this.cartCount = 3;
+    }, 100);
+  }
 }
