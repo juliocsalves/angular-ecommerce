@@ -106,3 +106,9 @@
 
 
 }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .card-title__container form .form-control {
+    width: 125px; /* Ajuste conforme teu gosto */
+  }
+}

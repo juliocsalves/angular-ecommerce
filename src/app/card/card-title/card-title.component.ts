@@ -17,7 +17,7 @@ export class CardTitleComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.show = true;
-			this.cartCount = 3;
+			this.cartCount = 3; /* aqui vai a contagem de itens, se for zero o cartCount fica hidden no html */
     }, 100);
   }
 }
