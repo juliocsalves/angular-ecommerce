@@ -1,4 +1,3 @@
-/* === HEADER CONTAINER === */
 .card-title__container {
 	width: 100%;
 	min-width: 7rem;
@@ -103,11 +102,11 @@
 
 .btn-outline-dark:hover,
 .btn-outline-dark:focus {
-  background-color: #343a40;
-  color: #fff !important;
-  border-color: #2f2f2f !important;
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+	background-color: #343a40;
+	color: #fff !important;
+	border-color: #2f2f2f !important;
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* === HOVER DROPDOWN ITEMS === */
@@ -125,6 +124,30 @@
 	cursor: pointer;
 }
 
+/* === CUSTOM DROPDOWN COM TRANSIÇÃO === */
+.custom-dropdown {
+	max-height: 0;
+	overflow: hidden;
+	opacity: 0;
+	transition: max-height 0.4s ease, opacity 0.3s ease;
+	display: block;
+	visibility: hidden;
+	padding: 0;
+	margin: 0;
+}
+
+.custom-dropdown.show {
+	max-height: 500px;
+	/* ajustável conforme conteúdo */
+	opacity: 1;
+	visibility: visible;
+	padding: 0 0;
+}
+
+/* (restante do seu CSS continua abaixo sem mudanças) */
+
+
+
 /* === RESPONSIVO === */
 @media (max-width: 768px) {
 	.card-title__container {
@@ -135,10 +158,48 @@
 		flex-direction: column;
 		align-items: flex-start;
 	}
+
+	.custom-dropdown {
+		max-height: 0;
+		overflow: hidden;
+		opacity: 0;
+		transition: max-height 0.4s ease, opacity 0.3s ease;
+		display: block;
+		visibility: hidden;
+		padding: 0;
+		margin: 0;
+	}
+
+	.custom-dropdown.show {
+		max-height: 500px;
+		/* ajustável conforme conteúdo */
+		opacity: 1;
+		visibility: visible;
+		padding: 0 0;
+	}
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
 	.card-title__container form .form-control {
 		width: 125px;
 	}
+
+	.custom-dropdown {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  display: block;
+  visibility: hidden;
+  padding: 0;
+  margin: 0;
 }
+
+.custom-dropdown.show {
+  max-height: 500px; /* ajustável conforme conteúdo */
+  opacity: 1;
+  visibility: visible;
+  padding: 0 0;
+}
+}
+
