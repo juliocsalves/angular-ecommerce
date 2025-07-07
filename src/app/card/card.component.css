@@ -1,0 +1,42 @@
+.card_container {
+	position: relative;
+	border: 3px solid #c2a765;
+	border-radius: 10px;
+	width: 350px;
+	max-height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	margin-top: 10px;
+	padding: 0;
+	background-color: #fff;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+	animation-delay: 0.4s;
+	position: relative;
+	z-index: 1;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.card-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform .8s;
+	display: block;
+	margin-bottom: 0;
+}
+
+.card-image:hover {
+	transform: scale(1.1);
+}

@@ -1,0 +1,22 @@
+.card-princing__Container {
+  position: absolute;
+  z-index: 1;
+  /* background-color: #c2a865c2; */
+	background-color: rgba(194, 168, 101, 0.95);
+  border: none solid #c2a765;
+  border-radius: 0 0 6px 6px;
+  bottom: 0;
+  width: 100%;
+  height: 5.5rem;
+  left: 0;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-princing__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}

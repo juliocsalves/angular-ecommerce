@@ -1,0 +1,10 @@
+.home-component__Container {
+	margin-top: 4%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	flex-direction: row;
+	align-content: center;
+	justify-content: center;
+	gap: 2rem;
+}

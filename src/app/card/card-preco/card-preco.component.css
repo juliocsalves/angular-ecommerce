@@ -1,0 +1,24 @@
+.card-preco__Container {
+	display: flex;
+	position: absolute;
+	z-index: 10000;
+
+	color: #fff;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 600;
+	font-size: 0.9rem;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+	padding: 0.4rem 0.8rem;
+
+	bottom: 5.5rem;
+	border: 2px solid white;
+	border-radius: 2rem;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+	background-color: #000;
+
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	right: 0;
+	margin: 1rem;
+
+}

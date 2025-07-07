@@ -1,31 +1,31 @@
+/* === HEADER CONTAINER === */
 .card-title__container {
-  width: 100%;
-  min-width: 7rem;
-  padding: 0;
-  margin: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1050;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	width: 100%;
+	min-width: 7rem;
+	padding: 0;
+	margin: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-  background-color: rgba(255, 255, 255, 0);
-  border-bottom: 1px solid rgba(95, 84, 76, 0.3);
-  box-shadow: 0 4px 10px rgba(95, 84, 76, 0.25);
+	background-color: rgba(255, 255, 255, 0.411);
+	border-bottom: 1px solid rgba(95, 84, 76, 0.3);
+	box-shadow: 0 4px 10px rgba(95, 84, 76, 0.25);
 
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 500;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 500;
 
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+	opacity: 0;
+	transform: translateY(-20px);
+	transition: opacity 0.5s ease, transform 0.5s ease;
 }
-
 
 .card-title__container.show {
 	opacity: 1;
@@ -33,7 +33,7 @@
 }
 
 .container-fluid {
-	background-color: rgba(255, 255, 255, 0);
+	background-color: transparent;
 }
 
 .card-title__margin {
@@ -60,40 +60,72 @@
 	object-fit: contain;
 }
 
-/* Efeito hover leve com sombra e leve escala */
+
+/* === BOTÃO SANDUÍCHE COM TRANSITION === */
+.navbar-toggler {
+	transition: all 0.3s ease;
+	border: 1px solid #c2a765;
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 5px;
+	padding: 0.4rem 0.6rem;
+}
+
+.navbar-toggler:hover {
+	background-color: #c2a765;
+	border-color: #a78a4f;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	transform: scale(1.05);
+}
+
+/* === DROPDOWN TRANSITION === */
+.dropdown-menu {
+	opacity: 0;
+	transform: translateY(10px);
+	transition: opacity 0.3s ease, transform 0.3s ease;
+	visibility: hidden;
+	display: block;
+	pointer-events: none;
+}
+
+.dropdown:hover .dropdown-menu {
+	opacity: 1;
+	transform: translateY(0);
+	visibility: visible;
+	pointer-events: auto;
+}
+
+/* === HOVER BOTÕES === */
+.btn-outline-dark {
+	color: #3b3b3b !important;
+	border-color: #3b3b3b !important;
+	transition: all 0.3s ease;
+}
+
 .btn-outline-dark:hover,
 .btn-outline-dark:focus {
   background-color: #343a40;
-  color: #fff;
+  color: #fff !important;
+  border-color: #2f2f2f !important;
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
 }
 
-/* Voltar ao normal quando sair do hover */
-.btn-outline-dark {
-  transition: all 0.3s ease;
+/* === HOVER DROPDOWN ITEMS === */
+.dropdown-menu .dropdown-item {
+	transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+	transform: scale(1);
 }
 
-/* Hover suave com background escuro, texto branco, sombra e leve zoom */
 .dropdown-menu .dropdown-item:hover,
 .dropdown-menu .dropdown-item:focus {
-  background-color: #343a40; /* fundo escuro */
-  color: #fff;               /* texto branco */
-  transform: scale(1.05);    /* leve zoom igual aos botões */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* sombra suave */
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+	background-color: #343a40;
+	color: #fff;
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	cursor: pointer;
 }
 
-/* Reset do transform no estado normal para suavizar a transição */
-.dropdown-menu .dropdown-item {
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  transform: scale(1);
-}
-
-
-/* Responsivo para ajustar altura em mobile se precisar */
+/* === RESPONSIVO === */
 @media (max-width: 768px) {
 	.card-title__container {
 		height: auto;
@@ -103,12 +135,10 @@
 		flex-direction: column;
 		align-items: flex-start;
 	}
-
-
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  .card-title__container form .form-control {
-    width: 125px; /* Ajuste conforme teu gosto */
-  }
+	.card-title__container form .form-control {
+		width: 125px;
+	}
 }
