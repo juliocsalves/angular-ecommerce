@@ -1,13 +1,18 @@
-import { Component } from '@angular/core';
-import { CardPricingComponent } from "./card-pricing/card-pricing.component";
-import { CardPrecoComponent } from "./card-preco/card-preco.component";
+import { Component, Input } from '@angular/core';
+import { CardPrecoComponent } from './card-preco/card-preco.component';
+import { CardPricingComponent } from './card-pricing/card-pricing.component';
 
 @Component({
   selector: 'app-card',
-  imports: [CardPricingComponent, CardPrecoComponent],
+  standalone: true,
+  imports: [CardPrecoComponent, CardPricingComponent],
   templateUrl: './card.component.html',
-  styleUrl: './card.component.css'
+  styleUrls: ['./card.component.css']
 })
 export class CardComponent {
+  @Input()
+  itemCover: string = 'assets/image/o-grito.jpg';
 
+  @Input()
+  itemPreco: string = 'R$ 11.000,00'; // ← string formatada
 }

@@ -9,7 +9,7 @@
     "categoria_id": 1,
     "medidas": "460cm x 880cm",
     "disponivel": false,
-    "novidade": false
+    "novidade": true
   },
   {
     "id": 2,

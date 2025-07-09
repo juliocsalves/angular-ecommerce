@@ -3,10 +3,13 @@ import { CardComponent } from "../../card/card.component";
 
 @Component({
   selector: 'app-home',
+  standalone: true,
   imports: [CardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
 
+	itemCover = "assets/image/o-grito.jpg";
+	itemPreco = "R$ 13.000,00";
 }

@@ -1,17 +1,13 @@
 <a href="#" class="card text-decoration-none shadow-sm h-100 card_container">
-  <img
-    src="assets/image/o-grito.jpg"
-    alt="Quadro Noite Estrelada"
-    class="card-image img-fluid rounded-top"
-  >
+	<img [src]=[itemCover] alt="Quadro Noite Estrelada" class="card-image img-fluid rounded-top">
 
-  <div class="card-body p-0">
-    <!-- COMPONENTES DENTRO DO CARD -->
-    <!--
+	<div class="card-body p-0">
+		<!-- COMPONENTES DENTRO DO CARD -->
+		<!--
     <app-card-label [gameLabel]="gameLabel"></app-card-label>
     <app-card-pricing [gameType]="gameType" [gamePrice]="gamePrice"></app-card-pricing>
     -->
-		<app-card-preco></app-card-preco>
+		<app-card-preco [itemPreco]="itemPreco"></app-card-preco>
 		<app-card-pricing></app-card-pricing>
-  </div>
+	</div>
 </a>

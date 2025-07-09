@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-card-artist',
@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './card-artist.component.css'
 })
 export class CardArtistComponent {
+
+	@Input()
+	itemArtista:String = "Edvard Munch"
 
 }
